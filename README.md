@@ -43,3 +43,11 @@ In trying to be a little more productive than merely waiting, I've been trying t
 ------------
 #### 09:04
 After an hour of debugging the service worker and Squoosh, I have gotten basically nowhere. I've decided to try fixing the service worker first, and then tackle Squoosh.
+
+More problems. Not that I expected any less. Now since Git didn't install when I installed GitHub desktop (twice), I can't seem to access Git through PowerShell. And because of this, precommit scripts don't seem to work. So for the precommit scripts to have any effect, I have to use Git through PowerShell, but I can't since Git "is not recognized as the name of a cmdlet, function, script file, or operable program". And still, the service worker does not work. My JS document contains the following code:
+
+if (navigator && navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js');
+}
+
+And the following error message is written: "Uncaught (in promise) TypeError: Failed to register a ServiceWorker for scope ('https://edvinflodstrom.github.io/') with script ('https://edvinflodstrom.github.io/sw.js'): A bad HTTP response code (404) was received when fetching the script."
