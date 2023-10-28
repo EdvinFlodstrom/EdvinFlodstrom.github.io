@@ -18,7 +18,7 @@ I think CSS lint is working. If I run the "lint" script I added to "package.json
 #### 13:17
 While running into problems around every corner, I've been searching for searching for answers to various problems I've encountered in the past hour. At first, when I was going to try to set up a GitHub Pages site, I ran into the issue of Git not working in PowerShell. I'm not certain if it's because I've missed something or if I'm supposed to install Git for Windows or something similar. I've also been trying to get Squoosh to work, but I'm struggling with it. After some time of trying to find which commands to use in PowerShell or in "package.json", I found the following link: "https://www.npmjs.com/package/@squoosh/cli?activeTab=code". It explains how to use Squoosh in "package.json", but when trying it out, I'm getting an error message stating the following:
 
-`node:internal/deps/undici/undici:11372
+node:internal/deps/undici/undici:11372
     Error.captureStackTrace(err, this);
           ^
 
@@ -26,7 +26,7 @@ TypeError: fetch failed
     at Object.fetch (node:internal/deps/undici/undici:11372:11) {
   cause: Error: unknown scheme
   ...
-    }`
+    }
 
 I am very much unsure of what to make of this error message.
 
@@ -38,3 +38,8 @@ In trying to be a little more productive than merely waiting, I've been trying t
 * https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/
 * https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 * https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker
+
+2023-10-28
+------------
+#### 09:04
+After an hour of debugging the service worker and Squoosh, I have gotten basically nowhere. I've decided to try fixing the service worker first, and then tackle Squoosh.
