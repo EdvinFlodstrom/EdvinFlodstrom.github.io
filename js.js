@@ -1,3 +1,8 @@
 if (navigator && navigator.serviceWorker) {
-    navigator.serviceWorker.register('../sw.js');
+    try {
+        navigator.serviceWorker.register('../sw.js');
+    }
+    catch(error) {
+        console.log(error);
+    }
 }
