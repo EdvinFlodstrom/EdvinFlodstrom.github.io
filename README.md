@@ -51,3 +51,43 @@ if (navigator && navigator.serviceWorker) {
 }
 
 And the following error message is written: "Uncaught (in promise) TypeError: Failed to register a ServiceWorker for scope ('https://edvinflodstrom.github.io/') with script ('https://edvinflodstrom.github.io/sw.js'): A bad HTTP response code (404) was received when fetching the script."
+
+#### 09:51
+Service worker works. At least it looks like it, since I'm no longer getting the error message. All I did was move the code from js.js to index.html. I didn't change the code at all, as far as I know. So I don't really know why (if) it works, but I won't question it. I used the following links: 
+* https://stackoverflow.com/questions/60675954/failed-to-register-a-serviceworker-flutter
+* https://github.com/hanford/next-offline/issues/141
+* https://stackoverflow.com/questions/30336685/404-error-when-trying-to-register-serviceworker
+* https://stackoverflow.com/questions/60960328/which-type-of-event-listeners-are-available-for-service-workers#:~:text=Event%20listener%20function%20in%20service%20workers%20seems%20to,%27%20fetch%20type%20%27%20in%20a%20service%20worker
+* https://www.w3.org/TR/service-workers/#execution-context-events
+
+And a few others. So now I'll have to try tackling Squoosh. Problem is, I've already searched everywhere I can think of, so I'll just have to get started.
+
+#### 10:41
+Still, no progress. I've tried installing Squoosh using "npm install squoosh", but it seems to do literally nothing since the npm module appears empty (https://www.npmjs.com/package/squoosh?activeTab=code). I've tried installing squoosh/lib, but it works in JavaScript and seemingly not in PowerShell or JSON. I've tried installing squoosh/cli in three separate folders, including this one, another one on OneDrive, and the final one on my local drive. All have resulted in the same error message, as documented previously. No documentation I've found online has been of any help, and commands that some people use in the CLI to Squoosh images produce the aforementioned error message instead for me. The root issue is that I cannot access anything with Squoosh. I can run the commands, but the fetch always fails regardless of location or file type.
+* https://www.npmjs.com/package/@squoosh/cli?activeTab=code
+* https://dev.to/0xkoji/optimize-images-with-cli-tool-from-google-squoosh-nfg
+* https://targetinternet.com/resources/a-complete-guide-to-squoosh-what-is-it-and-how-to-use-it/
+* https://web.dev/blog/introducing-libsquoosh
+
+I have been searching for a fix for hours, but in the end I always get the same error message. The full message is as follows:
+
+node:internal/deps/undici/undici:11372
+    Error.captureStackTrace(err, this);
+          ^
+
+TypeError: fetch failed
+    at Object.fetch (node:internal/deps/undici/undici:11372:11) {
+  cause: Error: unknown scheme
+      at makeNetworkError (node:internal/deps/undici/undici:4801:35)
+      at schemeFetch (node:internal/deps/undici/undici:9538:18)
+      at node:internal/deps/undici/undici:9409:26
+      at mainFetch (node:internal/deps/undici/undici:9428:11)
+      at fetching (node:internal/deps/undici/undici:9377:7)
+      at fetch2 (node:internal/deps/undici/undici:9245:20)
+      at Object.fetch (node:internal/deps/undici/undici:11370:18)
+      at fetch (node:internal/process/pre_execution:242:25)
+      at instantiateAsync (C:\Users\04edfl12\OneDrive - Stenungsunds Kommun\Webbutveckling\pwa\node_modules\@squoosh\lib\build\index.js:28:11469)
+      at createWasm (C:\Users\04edfl12\OneDrive - Stenungsunds Kommun\Webbutveckling\pwa\node_modules\@squoosh\lib\build\index.js:28:12079)
+}
+
+Apart from any minor file path changes, it always looks the same regardless of where I execute any Squoosh-related commands. I tried installing squoosh/cli globally, using `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` to allow scripts to be run, same result. Same error message. No matter what approach I seem to take, the wall in the way (the error) remains somewhere else, and so no matter what approach I take, I always run into said wall eventually. This command: "squoosh-cli -d --output ." also provides the same error message. And so does this one: "squoosh-cli --max-optimizer-rounds 5 images/grass.jpg". And this one: "squoosh-cli -s . *". Basically the only Squoosh command that actually works is: "squoosh-cli --help". I assume this means that the problem has to have to do with squoosh/cli. I don't know what else to do, or where else to search. I've tried everything I can think of multiple times, to no avail. This command also works "npx @squoosh/cli --help", but it's the same as a previously mentioned one apart from this one being without @squoosh/cli being installed globally. So it doesn't help. Running the following JSON script: '"squoosh": "@squoosh-cli mozjpeg 50px *"' with "npm run squoosh" also results in the same error message.

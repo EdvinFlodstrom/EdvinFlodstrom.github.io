@@ -1,9 +1,7 @@
 {
   "dependencies": {
     "@squoosh/cli": "^0.7.3",
-    "@squoosh/lib": "^0.5.3",
     "bootstrap": "^5.3.2",
-    "capture-stack-trace": "^2.1.0",
     "csslint": "^1.0.5",
     "onchange": "^7.1.0"
   },
@@ -17,7 +15,7 @@
     "watch:scss": "onchange \"sass.scss\" -- npm run scss",
     "scss": "sass sass.scss style.css",
     "csslint": "csslint style.css",
-    "squoosh": "squoosh-cli --mozjpeg 50px *.jpg",
+    "squoosh": "@squoosh-cli mozjpeg 50px *",
     "precommit-msg": "echo 'Running pre-commit scripts'&& exit 0"
   },
   "devDependencies": {
