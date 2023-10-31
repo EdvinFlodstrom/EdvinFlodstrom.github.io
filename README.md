@@ -123,3 +123,9 @@ node:internal/process/promises:279
 }
 
 So it's a new error message, and it's basically unique to the version 16.20.2 of NodeJS, but it still doesn't work. I spent an hour and a half debugging and trying to fix it, to no avail. I deleted package-lock.json, installed and uninstalled both Squoosh and @Squoosh/cli, I tried multiple versions of NodeJS (I'm using nvm for Windows (https://github.com/coreybutler/nvm-windows)), cleared the npm cache, closed and reopened VSCodium (I also tried running the Squoosh command with VSCodium closed), I made sure no other processes of NodeJS were running, and I restarded my computer. Alas, it was not to be, for Squoosh remains unflinchingly uncooperative.
+* https://github.com/coreybutler/nvm-windows
+* https://github.com/coreybutler/nvm-windows/releases
+* https://www.npmjs.com/package/n
+* https://nodejs.org/en/about/previous-releases
+* https://stackoverflow.com/questions/49620780/cant-install-any-npm-package-error-4058
+* https://stackoverflow.com/questions/45557788/npm-err-code-eperm
