@@ -96,3 +96,6 @@ Apart from any minor file path changes, it always looks the same regardless of w
 ------------
 #### 09:59
 After trying for a while to figure out how exactly to use Bootstrap, I've managed to implement a simple button that I think looks fine. It took me longer than I would've preferred, but I haven't worked a lot with Bootstrap before so at least I've made some progress now. I also got Git working in PowerShell by installing Git for Windows, so next time I commit, I'll try doing it through PowerShell. With a bit of luck, the first commit won't work due to the current pre-commit script expecting Squoosh to work (it doesn't).
+
+#### 11:02
+Alas, pre-commit did not stop the commit. I'm not sure if it's because I'm using PowerShell or something else, but the commit went through just fine, unlike what I had expected. Anyhow, I was also trying to generate a manifest.json file, but the generator appears unwilling to cooperate (https://app-manifest.firebaseapp.com/), since if I ever press "Generate .ZIP", with or without adding text or an image, I get a server error. I suppose I could create my own manifest.json file, and if the generator keeps giving me errors, I'll try it eventually.
