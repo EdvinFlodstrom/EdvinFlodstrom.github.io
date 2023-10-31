@@ -7,23 +7,23 @@
     "theme_color": "oklch(79% 0.098 240.99 / 92.12%)",
     "icons": [
         {
-            "src": "/images/updatedicon72.jpg",
-            "type": "image/jpg",
+            "src": "/images/updatedicon72.png",
+            "type": "image/png",
             "sizes": "72x72"
         },
         {
-            "src": "/images/updatedicon152.jpg",
-            "type": "image/jpg",
-            "sizes": "152x152"
+            "src": "/images/updatedicon144.png",
+            "type": "image/png",
+            "sizes": "144x144"
         },
         {
-            "src": "/images/updatedicon384.jpg",
-            "type": "image/jpg",
+            "src": "/images/updatedicon384.png",
+            "type": "image/png",
             "sizes": "384x384"
         },
         {
-            "src": "/images/updatedicon512.jpg",
-            "type": "image/jpg",
+            "src": "/images/updatedicon512.png",
+            "type": "image/png",
             "sizes": "512x512"
         }
     ]
