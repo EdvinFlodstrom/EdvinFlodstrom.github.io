@@ -1,9 +1,16 @@
-$buttonColor: blue;
-$buttonHeight: 50px;
-$buttonWidth: 200px;
+$prefix: "btn";
+$btn-padding-x: 25px;
+$btn-padding-y: 30px;
+$btn-font-family: default;
+$btn-font-weight: 1em;
+$btn-line-height: 50px;
+$btn-color: blue;
+$btn-border-width: 5px;
+$btn-border-radius: 15px;
+$btn-box-shadow: 5px 2px 2px purple;
+$btn-disabled-opacity: 0.5;
 
-.btn {
-    color: $buttonColor;
-    height: $buttonHeight;
-    width: $buttonWidth;
-}   
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import "node_modules/bootstrap/scss/_buttons.scss";
