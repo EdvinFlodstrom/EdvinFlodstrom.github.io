@@ -106,10 +106,7 @@ The manifest.json file seems to be functional now. Since the generator still was
 * https://www.youtube.com/watch?v=AlEdGOLhuM8
 
 #### 21:10
-Later on in the day, I got some help with fixing Squoosh. It seems Squoosh was incompatible with the version of NodeJS I was using, so I downgraded and tried again. It did not work. Now I'm getting a new error message, stating the following: 
-
-> squoosh
-> @squoosh-cli resize `{'enabled':true}` *
+Later on in the day, I got some help with fixing Squoosh. It seems Squoosh was incompatible with the version of NodeJS I was using, so I downgraded NodeJS and tried again. It almost worked, but not quite. Now I'm getting a new error message, stating the following:
 
 node:internal/process/promises:279
             triggerUncaughtException(err, true /* fromPromise */);
