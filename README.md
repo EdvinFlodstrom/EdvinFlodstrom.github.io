@@ -104,3 +104,22 @@ Alas, pre-commit did not stop the commit. I'm not sure if it's because I'm using
 The manifest.json file seems to be functional now. Since the generator still wasn't working, I made the file myself with help I found online. I had some trouble getting the images to load properly, since I initially didn't realize the JPG format was invalid, and after that one of the images wasn't loading. To fix this, I converted them all to PNGs and removed the one image that wasn't loading. This fixed the issue, and the manifest.json file seems to be working properly now. With this, I think the project has the three core components of a PWA, but I still have to get Squoosh working.
 * https://developer.mozilla.org/en-US/docs/Web/Manifest/scope
 * https://www.youtube.com/watch?v=AlEdGOLhuM8
+
+#### 21:10
+Later on in the day, I got some help with fixing Squoosh. It seems Squoosh was incompatible with the version of NodeJS I was using, so I downgraded and tried again. It did not work. Now I'm getting a new error message, stating the following: 
+
+> squoosh
+> @squoosh-cli resize `{'enabled':true}` *
+
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+[Error: ENOENT: no such file or directory, lstat 'C:\Users\04edfl12\OneDrive - Stenungsunds Kommun\Webbutveckling\pwa\resize'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'C:\\Users\\04edfl12\\OneDrive - Stenungsunds Kommun\\Webbutveckling\\pwa\\resize'
+}
+
+So it's a new error message, and it's basically unique to the version 16.20.2 of NodeJS, but it still doesn't work. I spent an hour and a half debugging and trying to fix it, to no avail. I deleted package-lock.json, installed and uninstalled both Squoosh and @Squoosh/cli, I tried multiple versions of NodeJS (I'm using nvm for Windows (https://github.com/coreybutler/nvm-windows)), cleared the npm cache, closed and reopened VSCodium (I also tried running the Squoosh command with VSCodium closed), I made sure no other processes of NodeJS were running, and I restarded my computer. Alas, it was not to be, for Squoosh remains unflinchingly uncooperative.
