@@ -99,3 +99,6 @@ After trying for a while to figure out how exactly to use Bootstrap, I've manage
 
 #### 11:02
 Alas, pre-commit did not stop the commit. I'm not sure if it's because I'm using PowerShell or something else, but the commit went through just fine, unlike what I had expected. Anyhow, I was also trying to generate a manifest.json file, but the generator appears unwilling to cooperate (https://app-manifest.firebaseapp.com/), since if I ever press "Generate .ZIP", with or without adding text or an image, I get a server error. I suppose I could create my own manifest.json file, and if the generator keeps giving me errors, I'll try it eventually.
+
+#### 11:52
+The manifest.json file seems to be functional now. Since the generator still wasn't working, I made the file myself with help I found online. I had some trouble getting the images to load properly, since I initially didn't realize the JPG format was invalid, and after that one of the images wasn't loading. To fix this, I converted them all to PNGs and removed the one image that wasn't loading. This fixed the issue, and the manifest.json file seems to be working properly now. With this, I think the project has the three core components of a PWA, but I still have to get Squoosh working.
