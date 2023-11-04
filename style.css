@@ -1,11 +1,11 @@
 .btn {
-  --btnbtn-padding-x: 25px;
-  --btnbtn-padding-y: 30px;
+  --btnbtn-padding-x: 30px;
+  --btnbtn-padding-y: 25px;
   --btnbtn-font-family: default;
   --btnbtn-font-size: 1rem;
   --btnbtn-font-weight: 1em;
   --btnbtn-line-height: 50px;
-  --btnbtn-color: blue;
+  --btnbtn-color: yellow;
   --btnbtn-bg: transparent;
   --btnbtn-border-width: 5px;
   --btnbtn-border-color: transparent;
@@ -380,6 +380,32 @@
   --btnbtn-padding-x: 0.5rem;
   --btnbtn-font-size: 0.875rem;
   --btnbtn-border-radius: var(--btnborder-radius-sm);
+}
+
+body {
+  background-image: url("images/bluebg.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blackjack {
+  text-align: center;
+  font-size: 35px;
+}
+
+.blackjack h1, p {
+  color: oklch(0.0914 0.0633 264.05);
+}
+
+#bet {
+  color: white;
+}
+
+.btn {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

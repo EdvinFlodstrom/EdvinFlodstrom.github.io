@@ -119,10 +119,18 @@ node:internal/process/promises:279
   path: 'C:\\Users\\04edfl12\\OneDrive - Stenungsunds Kommun\\Webbutveckling\\pwa\\resize'
 }
 
-So it's a new error message, and it's basically unique to the version 16.20.2 of NodeJS, but it still doesn't work. I spent an hour and a half debugging and trying to fix it, to no avail. I deleted package-lock.json, installed and uninstalled both Squoosh and @Squoosh/cli, I tried multiple versions of NodeJS (I'm using nvm for Windows (https://github.com/coreybutler/nvm-windows)), cleared the npm cache, closed and reopened VSCodium (I also tried running the Squoosh command with VSCodium closed), I made sure no other processes of NodeJS were running, and I restarded my computer. Alas, it was not to be, for Squoosh remains unflinchingly uncooperative.
+So it's a new error message, and it's basically unique to the version 16.20.2 of NodeJS, but it still doesn't work. I spent an hour and a half debugging and trying to fix it, to no avail. I deleted package-lock.json, installed and uninstalled both Squoosh and @Squoosh/cli, I tried multiple versions of NodeJS (I'm using nvm for Windows (https://github.com/coreybutler/nvm-windows)), cleared the npm cache, closed and reopened VSCodium (I also tried running the Squoosh command with VSCodium closed), I made sure no other processes of NodeJS were running, and I restarted my computer. Alas, it was not to be, for Squoosh remains unflinchingly uncooperative.
 * https://github.com/coreybutler/nvm-windows
 * https://github.com/coreybutler/nvm-windows/releases
 * https://www.npmjs.com/package/n
 * https://nodejs.org/en/about/previous-releases
 * https://stackoverflow.com/questions/49620780/cant-install-any-npm-package-error-4058
 * https://stackoverflow.com/questions/45557788/npm-err-code-eperm
+
+2023-11-04
+--------------
+#### 15:06
+Ignoring Squoosh, I instead opted to fix up the base of the PWA. In its previous state, it was an empty web page with an unoriginal header, a boring button and a plain image. Since I had an old Blackjack project (I wrote simple HTML, CSS, and JavaScript documents for it like a month ago) lying around, i decided to put it to use in this project. It wasn't as simple as copy pasting it, for two reasons: 1. The buttons in the Blackjack game were boring and I wanted to use Bootstrap to make them more lively, and 2. Some of the JavaScript code was poorly written so I had to modify it slightly. I didn't run into any major issues with these two steps, but I had a little trouble making the buttons look good. After mostly copy pasting the Blackjack game into this project, the buttons were very bland. When playing the game, the buttons change colour between yellow and red depending on whether you could interact with them or not. I thought to make it a little more interesting, since I'd already imported Bootstrap, so I added Bootstrap classes to the buttons and changed these classes rather than the buttons' background colors throughout the game. As a result, the buttons have a nice transition between their original color and green if you can click them, or red if you cannot. So now this project is a Blackjack game, and not a plain and boring white website with nothing in it. An unnecessary but welcome upgrade, I think.
+
+#### 15:47
+In typical me fashion, I accidentally pulled the wrong Blackjack project. Apparently I didn't push the 'bugfixed' Blackjack project after 'fixing' it last time, so my old project on GitHub was a little older than I intended. No big deal, I compared the two projects and noticed that the bugfixed version was basically identical with the one on GitHub. The only real difference I noticed was the removal of a single comment. So all that aside, this new version of Blackjack is probably done. As usual, I still have to fix Squoosh at some point, but this I will postpone until further notion. For now, I will leave this project as is.

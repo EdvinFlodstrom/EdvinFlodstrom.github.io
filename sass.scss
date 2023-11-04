@@ -1,10 +1,10 @@
 $prefix: "btn";
-$btn-padding-x: 25px;
-$btn-padding-y: 30px;
+$btn-padding-x: 30px;
+$btn-padding-y: 25px;
 $btn-font-family: default;
 $btn-font-weight: 1em;
 $btn-line-height: 50px;
-$btn-color: blue;
+$btn-color: yellow;
 $btn-border-width: 5px;
 $btn-border-radius: 15px;
 $btn-box-shadow: 5px 2px 2px purple;
@@ -14,3 +14,25 @@ $btn-disabled-opacity: 0.5;
 @import 'node_modules/bootstrap/scss/variables';
 @import 'node_modules/bootstrap/scss/mixins';
 @import "node_modules/bootstrap/scss/_buttons.scss";
+
+body {
+    background-image: url("images/bluebg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blackjack {
+    text-align: center;
+    font-size: 35px;
+}
+.blackjack h1, p {
+    color: oklch(0.0914 0.0633 264.05);
+}
+#bet {
+    color: white;
+}
+.btn {
+    margin-top: 10px;
+    font-size: 20px;
+}
