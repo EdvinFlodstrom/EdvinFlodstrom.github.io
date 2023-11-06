@@ -141,3 +141,12 @@ Apparently I accidentally imported the wrong JavaScript document. It seems I did
 -------------
 #### 09:15
 With the help of a classmate, Squosoh appears to be working now, I think. Changing the JSON script to `"squoosh": "squoosh-cli images/bluebg.jpg"` makes the command valid, and it doesn't cause any error messages. I'm unsure if the Squoosh script actually does anything, since I'm not specifying any resize size or anything similar, but at least I'm not getting any error message. If I try to add "resize", an error is thrown, so for now I'll leave it as is.
+
+#### 14:17
+When trying to fix pre-commit, after installing Cypress, I found a few articles mentioning a pre-commit hook and some similar things. So I found a "pre-commit.sample" file in .git/hooks, and it provides the following instructions: "To enable this hook, rename this file to "pre-commit"". I did that, and when trying to commit, it didn't work. This commit should have worked if I'd done it correctly, and a message should have been displayed, but neither was the case. Problem is, the pre-commit checks much more than just what the script in package.json specifies. I got aproximately a billion errors stopping the commit, so I assume this is because this way of implementing pre-commit is used for verifying entire projects rather than running predetermined scripts. So I suppose it's a way of implementing pre-commit, but not what I need.
+* https://stackoverflow.com/collectives/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g
+* https://stackoverflow.com/questions/56867216/why-wont-my-pre-commit-hook-run-when-i-commit
+* https://stackoverflow.com/questions/57084622/why-isnt-my-git-pre-commit-hook-running
+* https://stackoverflow.com/questions/67137482/git-pre-commit-hook-doesnt-work-in-windows
+* https://stackoverflow.com/collectives/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g
+* https://github.com/pre-commit/pre-commit/issues/1845
