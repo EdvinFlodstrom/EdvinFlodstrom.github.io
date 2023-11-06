@@ -10,6 +10,7 @@
     "scss": "sass sass.scss style.css",
     "csslint": "csslint style.css",
     "squoosh": "squoosh-cli images/bluebg.jpg",
+    "cypress": "cypress open",
     "precommit-msg": "echo 'Running pre-commit scripts'&& exit 0"
   },
   "pre-commit": [
@@ -19,6 +20,7 @@
     "squoosh"
   ],
   "devDependencies": {
+    "cypress": "^13.4.0",
     "pre-commit": "^1.2.2"
   }
 }
