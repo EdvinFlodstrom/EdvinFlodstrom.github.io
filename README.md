@@ -136,3 +136,8 @@ Ignoring Squoosh, I instead opted to fix up the base of the PWA. In its previous
 
 #### 15:47
 Apparently I accidentally imported the wrong JavaScript document. It seems I didn't push the 'bugfixed' Blackjack project after 'fixing' it last time, so my old project on GitHub was a little older than I intended. No big deal, I compared the two projects and noticed that the bugfixed version was basically identical with the one on GitHub. The only real difference I noticed was the removal of a single comment. So all that aside, this new version of Blackjack is probably done. As usual, I still have to fix Squoosh at some point, but this I will postpone until further notion. For now, I will leave this project as is.
+
+2023-11-06
+-------------
+#### 09:15
+With the help of a classmate, Squosoh appears to be working now, I think. Changing the JSON script to `"squoosh": "squoosh-cli images/bluebg.jpg"` makes the command valid, and it doesn't cause any error messages. I'm unsure if the Squoosh script actually does anything, since I'm not specifying any resize size or anything similar, but at least I'm not getting any error message. If I try to add "resize", an error is thrown, so for now I'll leave it as is.

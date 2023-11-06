@@ -9,7 +9,7 @@
     "watch:scss": "onchange \"sass.scss\" -- npm run scss",
     "scss": "sass sass.scss style.css",
     "csslint": "csslint style.css",
-    "squoosh": "@squoosh-cli resize `{'enabled':true}` *",
+    "squoosh": "squoosh-cli images/bluebg.jpg",
     "precommit-msg": "echo 'Running pre-commit scripts'&& exit 0"
   },
   "pre-commit": [
