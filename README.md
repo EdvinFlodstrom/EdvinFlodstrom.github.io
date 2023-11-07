@@ -169,3 +169,17 @@ I also tried going even more caveman and ignoring the style.css file with the sc
 
 #### 13:01
 In the end, I have decided to remove the csslint script from pre-commit, and let csslint lint with no restrictions. I could find no other solutions, and although not what I wanted, this approach will have to suffice. One can still lint the CSS before committing to GitHub, but pre-commit will not force it. All things considered, it's better to have it this way than to lint the CSS document with literally no rules. So I'll move on to Cypress instead, now.
+
+#### 16:00
+The cypress test now works. Initially I wanted to avoid JQuery, despite it being included in Cypress, but I ended up using some JQuery functions regardless. But it works flawlessly, so I'm not going to complain. The test does three things: 1. It navigates to a local server of the PWA (this local server has to be set up beforehand), 2. It checks that the button "Begin" has the class "btn-outline-danger" and then clicks the "plus100" button, and lastly it 3. checks that the "Begin" button now has the "btn-outline-success" class instead, and that the "bet" HTML tag has the HTML value "Bet: $100". This was the test I wanted to do when I started out with Cypress, so I'm glad that it actually worked as I'd hoped in the end.
+* https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
+* https://docs.cypress.io/guides/references/configuration
+* https://github.com/cypress-io/cypress/issues/4450
+* https://stackoverflow.com/questions/58700051/select-element-with-class-name-that-starts-with-using-cypress
+* https://docs.cypress.io/guides/references/best-practices#Selecting-Elements
+* https://stackoverflow.com/questions/71382547/how-can-i-verify-which-class-name-in-the-element
+* https://stackoverflow.com/questions/71385871/is-there-a-way-to-check-if-an-element-has-a-class-in-cypress-io
+* https://blog.learnjavascript.online/posts/javascript-has-class/
+* https://stackoverflow.com/questions/71973798/how-to-click-on-a-button-within-a-specific-div-based-on-button-text
+* https://docs.cypress.io/guides/core-concepts/conditional-testing
+* https://docs.cypress.io/guides/references/assertions

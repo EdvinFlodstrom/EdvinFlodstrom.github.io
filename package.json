@@ -12,12 +12,16 @@
     "csslint": "csslint style.css",
     "squoosh": "squoosh-cli images/bluebg.jpg",
     "cypress": "cypress open",
-    "precommit-msg": "echo 'Running pre-commit scripts'&& exit 0"
+    "cypress-spec": "cypress run",
+    "precommit-msg": "echo 'Running pre-commit scripts'&& exit 0",
+    "cypress-msg": "echo 'Remember to keep local server online for duration of commit'&& exit 0"
   },
   "pre-commit": [
     "precommit-msg",
     "scss",
-    "squoosh"
+    "squoosh",
+    "cypress-msg",
+    "cypress-spec"
   ],
   "devDependencies": {
     "cypress": "^13.4.0"
