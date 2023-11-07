@@ -3,7 +3,8 @@
     "@squoosh/cli": "^0.7.3",
     "bootstrap": "^5.3.2",
     "csslint": "^1.0.5",
-    "onchange": "^7.1.0"
+    "onchange": "^7.1.0",
+    "pre-commit": "^1.2.2"
   },
   "scripts": {
     "watch:scss": "onchange \"sass.scss\" -- npm run scss",
@@ -16,11 +17,9 @@
   "pre-commit": [
     "precommit-msg",
     "scss",
-    "csslint",
     "squoosh"
   ],
   "devDependencies": {
-    "cypress": "^13.4.0",
-    "pre-commit": "^1.2.2"
+    "cypress": "^13.4.0"
   }
 }

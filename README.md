@@ -150,3 +150,22 @@ When trying to fix pre-commit, after installing Cypress, I found a few articles 
 * https://stackoverflow.com/questions/67137482/git-pre-commit-hook-doesnt-work-in-windows
 * https://stackoverflow.com/collectives/articles/71270196/how-to-use-pre-commit-to-automatically-correct-commits-and-merge-requests-with-g
 * https://github.com/pre-commit/pre-commit/issues/1845
+
+#### 17:27
+After reading the following block of text in the README.md file at https://www.npmjs.com/package/pre-commit?activeTab=code: 
+> To install it as `devDependency`. When this module is installed it will override the existing `pre-commit` file in your `.git/hooks` folder. Existing `pre-commit` hooks will be backed up as `pre-commit.old` in the same repository.
+
+...I realized that the reason pre-commit isn't working for me is because I installed the pre-commit module BEFORE setting up Git in my project. This means that the module did not override the existing pre-commit file (there wasn't any to override), but rather, Git's pre-commit file in fact replaced pre-commit's pre-commit file. Simply put: because I installed the pre-commit module before setting up Git, the pre-commit hook file was incorrect. So pre-commit does stop my commits now, which is all well and good, but this caused me another issue. Since I've included csslint in my pre-commit script, I cannot make a commit without csslint being run (I know I can force a commit, though), and my style.css document has a grand total of 327 errors. I noticed one error I had made that I could easily fix, bringing the total down from 328. Thing is, about 325 (if not more) of these errors are from the scss code generated from Bootstrap. I can't easily change the css code that Bootstrap generates, at least not on a very detailed level. Most of the generated errors from running csslint are in the forms of "Rule doesn't have all its properties in alphabetiacal order" or "Expected RBRACE at line x, col y". I don't think there is much I can do about these issues, so I'm currently trying to get the CSS linter to ignore them instead.
+
+2023-11-07
+--------------
+#### 12:32
+From Squoosh to CSS lint, it seems. I appear to have found my new debugging opponent. As mentioned previously, I'm getting 300+ errors each time I run the csslint script, and this is obviously a problem. According to https://www.npmjs.com/package/csslint?activeTab=code, which leads to https://github.com/CSSLint/csslint/wiki/Command-line-interface, I can make the linter ignore certain rules by creating a .csslintrc file. It did not work, but no big deal this time. There was another strategy for ignoring rules, that being to embed the rules in the css document. So I added the rules to ignore in the sass.scss document and then translated it into css. It actually worked this time, but there were a lot of issues in the css document, and as such, a lot of issues to ignore. So I did not ignore one rule. I did not ignore five rules. No, I went full caveman and ignored ALL of them. But in the end, the caveman approach yielded caveman results. 277 issues yet remain. About 99% of the issues I'm getting are still in the form of "Expected RBRACE at line x, col y", and I blame Bootstrap for those. Not that it helps me, so I'll have to find another approach. I found a few articles discussing this issue, and no one appeared to have found a solution for ignoring the issues with csslint rules.
+* https://stackoverflow.com/questions/61378832/unable-to-fix-csslint-error-expected-rbrace-on-css-grid-rule
+* https://github.com/CSSLint/csslint/issues/603
+* https://github.com/CSSLint/csslint/issues/720
+
+I also tried going even more caveman and ignoring the style.css file with the script `"csslint": "csslint --exclude-list=<style.css> style.css"`, but that just deleted all the contents of my style.css document becacuse the linter couldn't find anything to lint.
+
+#### 13:01
+In the end, I have decided to remove the csslint script from pre-commit. I could find no other solutions, and although not what I wanted, this approach will have to suffice. One can still lint the CSS before committing to GitHub, but pre-commit will not force it. All things considered, it's better to have it this way than to lint the CSS document with literally no rules. So I'll move on to Cypress instead, now.

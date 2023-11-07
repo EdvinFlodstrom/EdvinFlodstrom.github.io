@@ -15,17 +15,20 @@
 <body>
     <div class="blackjack">
         <h1>Blackjack</h1>
-
-        <p id="pBegin">Click "Begin" to play. Min bet: $20</p>
+        
+        <p id="pBegin" data-cy="pBegin">Click "Begin" to play. Min bet: $20</p>
+        <div data-cy="cardsAndPoints">
         <p id="pCards">Cards: </p>
         <p id="pPoints">Points: </p>
         <p id="pSecondHandCards"></p>
         <p id="pSecondHandPoints"></p>
         <p id="pDealerCards">Dealer's cards: </p>
         <p id="pDealerPoints">Dealer's points: </p>
-        <p id="pChips">Chips: </p>        
+        </div>
+        <p id="pChips" data-cy="pChips">Chips: </p>        
 
-        <button class ="btn-warning btn-outline-danger btn" id="begin"><strong>Begin</strong></button>
+        <div data-cy="optionsButtons">
+        <button class ="btn-warning btn-outline-danger btn" id="begin" data-cy="begin"><strong>Begin</strong></button>
 
         <br>
 
@@ -33,14 +36,17 @@
         <button class ="btn-warning btn-outline-danger btn" id="hit"><strong>Hit</strong></button>
         <button class ="btn-warning btn-outline-danger btn" id="doubleUp"><strong>Double Down</strong></button>
         <button class ="btn-warning btn-outline-danger btn" id="split"><strong>Split</strong></button>
+        </div>
         
-        <p id="bet">Bet: $0</p>
-        <p id="secondHandBet"></p>
+        <p id="bet" class="pBet" data-cy="bet">Bet: $0</p>
+        <p id="secondHandBet" data-cy="secondHandBet"></p>
 
+        <div data-cy="betButtons">
         <button class ="btn-warning btn-outline-success btn" id="plus10"><strong>+$10</strong></button>
-        <button class ="btn-warning btn-outline-success btn" id="plus100"><strong>+$100</strong></button>
+        <button class ="btn-warning btn-outline-success btn" id="plus100" data-cy="plus100"><strong>+$100</strong></button>
         <button class ="btn-warning btn-outline-success btn" id="minus10"><strong>-$10</strong></button>
         <button class ="btn-warning btn-outline-success btn" id="minus100"><strong>-$100</strong></button>
+        </div>
     </div>
 
 </body>

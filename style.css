@@ -399,7 +399,7 @@ body {
   color: oklch(0.0914 0.0633 264.05);
 }
 
-#bet {
+.pBet {
   color: white;
 }
 
