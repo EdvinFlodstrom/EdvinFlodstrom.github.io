@@ -183,3 +183,7 @@ The cypress test now works. Initially I wanted to avoid JQuery, despite it being
 * https://stackoverflow.com/questions/71973798/how-to-click-on-a-button-within-a-specific-div-based-on-button-text
 * https://docs.cypress.io/guides/core-concepts/conditional-testing
 * https://docs.cypress.io/guides/references/assertions
+
+#### 16:16
+I've added a Cypress message and an extra Cypress script to package.json. I also added these two to pre-commit, so that Cypress runs the tests before each commit. It actually worked on my first attempt, this time. Since the test only passes if a local server of the project is open, the message writes out "Remember to keep local server online for duration of commit". Perhaps not flawless, but it works for this project, I think.
+* https://testersdock.com/cypress-test-runner-cli/#:~:text=How%20to%20execute%20Cypress%20Tests%20using%20Test%20Runner,your%20desired%20browser.%20...%202%202.%20Using%20CLI%3A
