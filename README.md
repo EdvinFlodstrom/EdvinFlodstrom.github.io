@@ -165,7 +165,7 @@ From Squoosh to CSS lint, it seems. I appear to have found my new debugging oppo
 * https://github.com/CSSLint/csslint/issues/603
 * https://github.com/CSSLint/csslint/issues/720
 
-I also tried going even more caveman and ignoring the style.css file with the script `"csslint": "csslint --exclude-list=<style.css> style.css"`, but that just deleted all the contents of my style.css document becacuse the linter couldn't find anything to lint.
+I also tried going even more caveman and ignoring the style.css file with the script `"csslint": "csslint --exclude-list=style.css style.css"`, but at that point there's really no point in using a linter, if all I'm using it for is to avoid its functions.
 
 #### 13:01
-In the end, I have decided to remove the csslint script from pre-commit. I could find no other solutions, and although not what I wanted, this approach will have to suffice. One can still lint the CSS before committing to GitHub, but pre-commit will not force it. All things considered, it's better to have it this way than to lint the CSS document with literally no rules. So I'll move on to Cypress instead, now.
+In the end, I have decided to remove the csslint script from pre-commit, and let csslint lint with no restrictions. I could find no other solutions, and although not what I wanted, this approach will have to suffice. One can still lint the CSS before committing to GitHub, but pre-commit will not force it. All things considered, it's better to have it this way than to lint the CSS document with literally no rules. So I'll move on to Cypress instead, now.
