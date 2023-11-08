@@ -197,4 +197,4 @@ For a while now, I've had a suspicion that my service worker isn't working prope
 Some good news, some potentially bad news. So in my browser, I'm getting an "App installable" prompt, which seems good, but I can't get the service worker to send a message to the console upon being installed. I'll keep trying some things and hope it works eventually, I suppose.
 
 #### 11:11
-So the service worker does register successfully, on my local server. Not on GitHub pages. I'm getting the aforementioned error message only on GitHub Pages, so I'm not sure what exactly is wrong here.
+So the service worker does register successfully, on my local server. Not on GitHub pages. I'm getting the aforementioned error message only on GitHub Pages, so I'm not sure what exactly is wrong here. I feel like the error has to be with the path to the "sw.js" document, with it only working on the local server. I'm trying to register the service worker from js.js with "navigator.serviceWorker.register('sw.js')", so it shouldn't be a local path, I think?
