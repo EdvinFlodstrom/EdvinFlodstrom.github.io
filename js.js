@@ -2,23 +2,13 @@ window.onload = init;
 
 function init() {
 
-    const registerServiceWorker = async () => {
-        if ("serviceWorker" in navigator) {
-          try {
-            const registration = await navigator.serviceWorker.register("sw.js", {
-            });
-            if (registration.installing) {
-              console.log("Service worker installing");
-            } else if (registration.waiting) {
-              console.log("Service worker installed");
-            } else if (registration.active) {
-              console.log("Service worker active");
+    if('serviceWorker' in navigator) { 
+        navigator.serviceWorker.register('sw.js')
+            .then(function(registration) {
+                 console.log("Service Worker Registered");
             }
-          } catch (error) {
-            console.error(`Registration failed with ${error}`);
-          }
-        }
-      };
+        ); 
+    }
       
 
     let startingCapital = 200;
