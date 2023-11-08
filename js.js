@@ -1,15 +1,14 @@
+if('serviceWorker' in navigator) { 
+    navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+             console.log("Service Worker Registered");
+        }
+    ); 
+}
+
 window.onload = init;
 
-function init() {
-
-    if('serviceWorker' in navigator) { 
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                 console.log("Service Worker Registered");
-            }
-        ); 
-    }
-      
+function init() {      
 
     let startingCapital = 200;
     let totalChips = startingCapital;
@@ -646,7 +645,4 @@ function init() {
             dealer();
         }, 2000);
     }
-
-
-    registerServiceWorker();
 }
