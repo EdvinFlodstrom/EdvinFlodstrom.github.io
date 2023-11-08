@@ -3,13 +3,12 @@ window.onload = init;
 function init() {
 
     if('serviceWorker' in navigator) { 
-        navigator.serviceWorker.register('sw.js')
-            .then(function(registration) {
-                 console.log("Service Worker Registered");
-            }
-        ); 
-    }
-
+    navigator.serviceWorker.register('../sw.js')
+        .then(function(registration) {
+             console.log("Service Worker Registered");
+        }
+    ); 
+}
 
     let startingCapital = 200;
     let totalChips = startingCapital;
