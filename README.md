@@ -192,3 +192,6 @@ I've added a Cypress message and an extra Cypress script to package.json. I also
 --------------
 #### 10:36
 For a while now, I've had a suspicion that my service worker isn't working properly. I'm still not completely certain, but I am getting an error message the first time I load the PWA through GitHub (only the first time I open it, subsequent reloads remove the error message), and it states the following: "failed to load resource: the server responded with a status of 404". A quick search on this error message tells me that GitHub probably couldn't find a certain file that I've linked to, somewhere. The page looks and functions well, so the service worker is probably my best bet here. I'll be trying some things before attempting to download the PWA to my phone, to make sure everything looks alright.
+
+#### 10:48
+Some good news, some potentially bad news. So in my browser, I'm getting an "App installable" prompt, which seems good, but I can't get the service worker to send a message to the console upon being installed. I'll keep trying some things and hope it works eventually, I suppose.
