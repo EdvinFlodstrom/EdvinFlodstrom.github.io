@@ -198,3 +198,6 @@ Some good news, some potentially bad news. So in my browser, I'm getting an "App
 
 #### 11:11
 So the service worker does register successfully, on my local server. Not on GitHub pages. I'm getting the aforementioned error message only on GitHub Pages, so I'm not sure what exactly is wrong here. I feel like the error has to be with the path to the "sw.js" document, with it only working on the local server. I'm trying to register the service worker from js.js with "navigator.serviceWorker.register('sw.js')", so it shouldn't be a local path, I think?
+
+#### 13:28
+I hardly know what to try anymore, I'm just testing random things and hoping for the best. Little setback, though, is that GitHub Pages doesn't update accordingly sometimes, so even if i Push an updated version of a file and can see that the file has updated successfully on GitHub, the Pages site is sometimes yet to update. This is despite the green check mark being present, which I think is meant to tell that GitHub Pages has finished loading. I'm not sure if it's because of me committing and pushing every other minute, or something else. Regardless, I'm still debugging this service worker. Trying to, at least.
