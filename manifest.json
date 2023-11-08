@@ -2,7 +2,7 @@
     "name": "Progressive Web Application",
     "short_name": "PWA",
     "start_url": "/index.html",
-    "display": "browser",
+    "display": "fullscreen",
     "scope": "/index.html",
     "theme_color": "oklch(79% 0.098 240.99 / 92.12%)",
     "icons": [

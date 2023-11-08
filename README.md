@@ -187,3 +187,8 @@ The cypress test now works. Initially I wanted to avoid JQuery, despite it being
 #### 16:16
 I've added a Cypress message and an extra Cypress script to package.json. I also added these two to pre-commit, so that Cypress runs the tests before each commit. It actually worked on my first attempt, this time. Since the test only passes if a local server of the project is open, the message writes out "Remember to keep local server online for duration of commit". Perhaps not flawless, but it works for this project, I think.
 * https://testersdock.com/cypress-test-runner-cli/#:~:text=How%20to%20execute%20Cypress%20Tests%20using%20Test%20Runner,your%20desired%20browser.%20...%202%202.%20Using%20CLI%3A
+
+2023-11-08
+--------------
+#### 10:36
+For a while now, I've had a suspicion that my service worker isn't working properly. I'm still not completely certain, but I am getting an error message the first time I load the PWA through GitHub (only the first time I open it, subsequent reloads remove the error message), and it states the following: "failed to load resource: the server responded with a status of 404". A quick search on this error message tells me that GitHub probably couldn't find a certain file that I've linked to, somewhere. The page looks and functions well, so the service worker is probably my best bet here. I'll be trying some things before attempting to download the PWA to my phone, to make sure everything looks alright.
